@@ -1,0 +1,82 @@
+.panel1 {
+    background-image: url("./assets/cave.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.panel2 {
+    background-image: url("./assets/jungle.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.panel3 {
+    background-image: url("./assets/animal.jfif");
+    background-size: cover;
+    background-position: center;
+}
+.panel4 {
+    background-image: url("./assets/waterfall.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.panel5 {
+    background-image: url("./assets/beach.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.panels {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    text-align: center;
+    flex: 1;
+}
+.panel {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    transition: font-size 0.3s cubic-bezier(1, -2.43, 0.08, 4.07), 
+    flex 0.7s cubic-bezier(0.63, 0.17, 0.75, 1.45);
+}
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: -3px 1px 15px color(display-p3 0 0 0 / 0.45), 0 0 14px color(xyz 0 0 0 / 0.45);
+    color: snow;
+    font-size: 1.3em;
+}
+.panel p:nth-child(2) {
+    font-size: 2.2em;
+}
+.panel > *:first-child {
+    transform: translateY(-100%);
+}
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+.panel.open-active > *:first-child {
+    transform: translateY(0%);
+}
+.panel.open-active > *:last-child {
+    transform: translateY(0%);
+}
+.panel.open {
+    font-size: 1.7em;
+    flex: 6;
+}
